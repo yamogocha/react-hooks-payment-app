@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+}
+
+.payment-page {
+  background: url("https://res.cloudinary.com/dre1b2zmh/image/upload/v1606679726/79eae60f1e4b247c88219f8caae89a42_tnhayo.jpg") center / cover;
+
+  .overlay {
+    background: $gradient-background;
+  }
+
+  #form-container {
+    @extend .vertical-flex-box;
+    height: 780px;
+    width: $form-width;
+    @include for-phone-only {
+      width: 95%;
+    }
+  }
+
+  #sq-walletbox {}
+  /* Customize the Apple Pay on the Web button */
+  #sq-apple-pay {
+    // display: none;
+    @extend .primary-btn;
+    background-image: url("https://res.cloudinary.com/dre1b2zmh/image/upload/v1606672165/5c409122eaae8_zauupr.png");
+  }
+  /* Customize the Masterpass button */
+  #sq-masterpass {
+    @extend .primary-btn;
+    background-image: url("https://masterpass.com/dyn/img/acc/global/mp_mark_hor_wht.svg");
+    // display: none;
+  }
+
+  #sq-google-pay {
+    @extend .primary-btn;
+    background-size: 55%;
+    background-image: url("https://res.cloudinary.com/dre1b2zmh/image/upload/v1606672777/Buy-with-Google-Pay-Button-dark-shadow-english_oybi6x.png");
+    // display: none;
+  }
+
+  .seperator {
+    @extend .horizontal-flex-box;
+    padding: 0 0 $small-padding;
+
+    hr {
+      display: inline-block;
+      width: 45%;
+    }
+
+    span {
+      color: white;
+      font-size: $small-font-size;
+    }
+  }
+
+  #sq-ccbox {
+    @extend .credit-card-box;
+  }
+
+  #cc-field-wrapper {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #sq-card-number {
+    width: $long-input;
+    @include for-phone-only {
+      width: 195px;
+    }
+  }
+
+  #sq-expiration-date {
+    width: $short-input;
+  }
+
+  #sq-cvv {
+    width: $short-input;
+  }
+
+  #sq-postal-code {
+    width: $short-input;
+  }
+
+  button.button-credit-card {
+    @extend .primary-btn;
+  }
+
+  input.name {
+    @extend .input-overwrite;
+    width: $long-input;
+    @include for-phone-only {
+      width: 125px;
+    }
+  }
+  // .sq-input--error {
+  //   input::placeholder {
+  //     color: red !important;
+  //   }
+  // }
+}

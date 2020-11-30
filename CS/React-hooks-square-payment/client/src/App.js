@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import Square from './Component/Square';
+import './css/App.scss';
+import Square from './component/Square';
 
 const App = () => {
   const [isLoaded, setLoaded] = useState(false);

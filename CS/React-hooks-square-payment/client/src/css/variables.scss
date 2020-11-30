@@ -1,0 +1,78 @@
+@mixin for-phone-only {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+$form-width: 385px;
+$small-padding: 1rem;
+$large-font-size: 18px;
+$base-font-size: 16px;
+$small-font-size: 13px;
+$primary-font: 'Syncopate', sans-serif;
+$secondary-font: 'Josefin Sans', sans-serif;
+$dark-grey: #9a9a9a;
+$primary-color: #00b2e3;
+$gradient-background: linear-gradient(180deg, rgba(0,0,0,0.2007177871148459) 0%, rgba(0,0,9,0.5032387955182073) 50%, rgba(1,0,8,1) 100%);
+$long-input: 200px;
+$short-input: 70px;
+
+.primary-btn {
+  height: 45px;
+  width: 100%;
+  margin: 0 0 16px;
+  background-size: 40%;
+  background-color: black;
+  color: white;
+  font-size: $base-font-size;
+  font-weight: 600;
+  font-family: $secondary-font;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.25rem;
+  border: 0;
+  box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.30), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.credit-card-box {
+  line-height: 1;
+  font-family: sans-serif;
+  border-radius: 10px;
+  background-color: $primary-color;
+  padding: $small-padding;
+  margin: 0 0 $small-padding;
+  font-size: $large-font-size;
+  color: white;
+}
+
+.input-overwrite {
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: $base-font-size;
+
+  &::placeholder {
+    color: white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.vertical-flex-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.horizontal-flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
